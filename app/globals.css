@@ -61,6 +61,11 @@ a {
   text-decoration: none;
 }
 
+.active {
+  color: red;
+  cursor: default;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -81,12 +86,13 @@ a {
   gap: 50px;
 }
 
-.link {
+header a {
   color: white;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
-.link:hover {
+header a:hover {
   text-decoration: underline;
 }
 
@@ -118,4 +124,21 @@ a {
   font-size: 30px;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+form button {
+  background-color: black;
+  cursor: pointer;
+  color: white;
+  border: none;
+  padding: 0 1rem;
+}
+
+input[type="search"] {
+  padding: 0.5rem 1rem;
 }
