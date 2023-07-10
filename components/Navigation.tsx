@@ -38,7 +38,7 @@ const Navigation = ({ navLinks }: Props) => {
           Sign Out
         </Link>
       ) : (
-        <Link href="/signin">Sign In</Link>
+        <Link href="/profile">Sign In</Link>
       )}
     </>
   );

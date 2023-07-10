@@ -5,6 +5,7 @@ import { useSearchParams } from 'next/navigation';
 
 const GoogleButton = () => {
   const searchParams = useSearchParams();
+
   const callbackUrl = searchParams.get('callbackUrl') || '/profile';
 
   return (
