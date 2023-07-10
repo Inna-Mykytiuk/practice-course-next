@@ -10,7 +10,10 @@ const GoogleButton = () => {
   return (
     <button
       className="sign-btn"
-      onClick={() => signIn('google', { callbackUrl })}
+      onClick={e => {
+        e.preventDefault();
+        signIn('google', { callbackUrl });
+      }}
     >
       Sign in with Google
     </button>
