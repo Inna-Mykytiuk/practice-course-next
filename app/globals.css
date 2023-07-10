@@ -165,3 +165,15 @@ input[type='search'] {
   padding: 0.8rem 1rem;
   border-radius: 5px;
 }
+
+.img {
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+.profile-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
