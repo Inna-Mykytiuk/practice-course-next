@@ -1,17 +1,18 @@
-import { Metadata } from "next";
+import { Metadata } from 'next';
+import { getPostById } from '@/services/getPosts';
 
-async function getData(id: string) {
-  const response = await fetch(
-    `https://jsonplaceholder.typicode.com/posts/${id}`,
-    {
-      next: {
-        revalidate: 60,
-      },
-    }
-  );
+// async function getData(id: string) {
+//   const response = await fetch(
+//     `https://jsonplaceholder.typicode.com/posts/${id}`,
+//     {
+//       next: {
+//         revalidate: 60,
+//       },
+//     }
+//   );
 
-  return response.json();
-}
+//   return response.json();
+// }
 
 type Props = {
   params: {
@@ -22,7 +23,8 @@ type Props = {
 export async function generateMetadata({
   params: { id },
 }: Props): Promise<Metadata> {
-  const post = await getData(id);
+  // const post = await getData(id);
+  const post = await getPostById(id);
 
   return {
     title: post.title,
@@ -30,7 +32,8 @@ export async function generateMetadata({
 }
 
 export default async function Post({ params: { id } }: Props) {
-  const post = await getData(id);
+  // const post = await getData(id);
+  const post = await getPostById(id);
 
   return (
     <>
