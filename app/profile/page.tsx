@@ -12,7 +12,7 @@ export default async function Profile() {
       {session?.user?.image && (
         <Image
           src={session.user.image}
-          alt=""
+          alt="avatar"
           width={100}
           height={100}
           className="img"

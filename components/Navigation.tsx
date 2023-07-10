@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useSession, signIn, signOut } from 'next-auth/react';
+import { useSession, signOut } from 'next-auth/react';
 
 type NavLink = {
   label: string;
@@ -38,7 +38,7 @@ const Navigation = ({ navLinks }: Props) => {
           Sign Out
         </Link>
       ) : (
-        <Link href="/signin">SignIn</Link>
+        <Link href="/signin">Sign In</Link>
       )}
     </>
   );
