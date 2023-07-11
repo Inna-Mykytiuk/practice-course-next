@@ -6,9 +6,8 @@ import { users } from '@/data/users';
 export const authConfig: AuthOptions = {
   providers: [
     GoogleProvider({
-      clientId:
-        '1010537517125-9vjbujjktse5ko3il7elalfjv2ivas6k.apps.googleusercontent.com',
-      clientSecret: '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',
+      clientId: process.env.GOOGLE_CLIENT_ID!,
+      clientSecret: process.env.GOOGLE_SECRET!,
     }),
     Credentials({
       credentials: {

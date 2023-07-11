@@ -6,14 +6,16 @@ import { useSearchParams } from 'next/navigation';
 const GoogleButton = () => {
   const searchParams = useSearchParams();
 
-  // const callbackUrl = searchParams.get('callbackUrl') || '/profile';
+  const callbackUrl =
+    searchParams.get('callbackUrl') ||
+    'https://practice-course-next.vercel.app/profile';
 
   return (
     <button
       className="sign-btn"
       onClick={() =>
         signIn('google', {
-          callbackUrl: 'https://practice-course-next.vercel.app/profile',
+          callbackUrl,
         })
       }
     >
