@@ -13,7 +13,7 @@ const GoogleButton = () => {
       className="sign-btn"
       onClick={() =>
         signIn('google', {
-          callbackUrl: 'https://practice-course-next.vercel.app/',
+          callbackUrl: 'https://practice-course-next.vercel.app/profile',
         })
       }
     >
